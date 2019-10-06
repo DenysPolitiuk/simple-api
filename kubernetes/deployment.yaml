@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: simple-api
-        image: denyspolitiuk/simple-api:latest
+        image: denyspolitiuk/simple-api:$COMMIT
         ports:
         - containerPort: 3000
         imagePullPolicy: Always
