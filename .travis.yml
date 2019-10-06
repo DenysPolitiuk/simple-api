@@ -1,6 +1,8 @@
 language: node_js
 node_js:
   - "node"
+services:
+- mongodb
 after_success:
   - bash docker/docker-registry-deploy.sh
   - bash kubernetes-deployment/install-kubectl.sh
