@@ -3,10 +3,10 @@ kind: Service
 metadata:
   name: db
   labels:
-    app: simple-api
+    app: simple-api-db
 spec:
   selector:
-    app: simple-api 
+    app: simple-api-db
   ports:
   - name: mongo-port
     port: 27017
@@ -21,12 +21,12 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: simple-api
+      app: simple-api-db
   serviceName: db
   template:
     metadata:
       labels:
-        app: simple-api
+        app: simple-api-db
     spec:
       containers:
       - name: db
