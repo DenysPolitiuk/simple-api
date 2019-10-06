@@ -21,3 +21,8 @@ spec:
         ports:
         - containerPort: 3000
         imagePullPolicy: Always
+        env:
+        - name: DB_HOST
+          value: "db"
+        - name: DB_PORT
+          value: "27017

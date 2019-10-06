@@ -16,7 +16,7 @@ describe("unit test", () => {
       .get("/hello")
       .expect(200)
       .end((err, res) => {
-        res.text.should.equal("Hello stranger!");
+        res.text.should.containEql("Hello stranger!");
       });
     done();
   });
@@ -26,7 +26,7 @@ describe("unit test", () => {
       .get("/hello?name=Denys")
       .expect(200)
       .end((err, res) => {
-        res.text.should.equal("Hello Denys!");
+        res.text.should.containEql("Hello Denys!");
       });
     done();
   });
