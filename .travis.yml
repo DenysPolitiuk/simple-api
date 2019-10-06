@@ -1,5 +1,5 @@
 language: node_js
 node_js:
   - "node"
-deploy:
+after_success:
   - bash docker/docker-registry-deploy.sh
