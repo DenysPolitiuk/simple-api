@@ -3,3 +3,5 @@ node_js:
   - "node"
 after_success:
   - bash docker/docker-registry-deploy.sh
+  - bash kubernetes-deployment/install-kubectl.sh
+  - bash kubernetes-deployment/kubernetes-deploy.sh
